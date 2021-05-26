@@ -35,7 +35,7 @@ jobs:
         run: yarn build
           
       - name: Install Surge
-        run: npm install --global surge
+        run: npm install -g surge
           
       - name: Deploy to Surge
-        run: surge ./build class2_sajid.surge.sh ${{secrets.SURGE_TOKEN}}
+        run: surge ./build class2_sajid.surge.sh --token ${{secrets.SURGE_TOKEN}}
